@@ -1,6 +1,9 @@
 {
   "name": "create-jynxio",
+  "author": "Jynxio",
+  "description": "",
   "version": "0.1.0",
+  "license": "MIT",
   "type": "module",
   "source": "src/index.js",
   "main": "dist/main.js",
@@ -10,26 +13,18 @@
   "engines": {
     "node": ">=18"
   },
-  "targets": {
-    "main": {
-      "sourceMap": false,
-      "isLibrary": true,
-      "optimize": true,
-      "includeNodeModules": [
-        "inquirer"
-      ]
-    }
-  },
   "scripts": {
     "build": "parcel build && node ./copy.js",
     "watch": "parcel watch && node ./copy.js"
   },
   "devDependencies": {
+    "@types/node": "^20.10.5",
     "fs-extra": "^11.2.0",
     "parcel": "^2.10.3",
-    "typescript": "^5.2.2"
+    "typescript": "^5.3.3"
   },
   "dependencies": {
-    "inquirer": "^9.2.12"
+    "kolorist": "^1.8.0",
+    "prompts": "^2.4.2"
   }
 }
