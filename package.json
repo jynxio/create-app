@@ -1,29 +1,47 @@
 {
   "name": "create-jynxio",
   "author": "Jynxio",
-  "description": "",
+  "description": "Scaffold for creating project templates",
   "version": "0.1.0",
   "license": "MIT",
   "type": "module",
-  "source": "src/index.js",
-  "main": "dist/main.js",
   "bin": {
-    "create-jynxio": "./dist/index.js"
+    "create-jynxio": "./index.js"
   },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "index.js",
+    "template-*",
+    "README.md"
+  ],
   "engines": {
     "node": ">=18"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jynxio/create-jynxio"
+  },
   "scripts": {
-    "build": "parcel build && node ./copy.js",
-    "watch": "parcel watch && node ./copy.js"
+    "build": "unbuild"
   },
   "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
     "@types/node": "^20.10.5",
-    "fs-extra": "^11.2.0",
-    "parcel": "^2.10.3",
-    "typescript": "^5.3.3"
+    "@types/prompts": "^2.4.9",
+    "typescript": "^5.3.3",
+    "unbuild": "^2.0.0"
   },
   "dependencies": {
+    "fs-extra": "^11.2.0",
     "kolorist": "^1.8.0",
     "prompts": "^2.4.2"
   }

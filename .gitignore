@@ -7,20 +7,26 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# Development
 *.local
+node_modules
+package-lock.json
 
-.parcel-cache
+# Production
+dist
+build
+dist-ssr
+build-ssr
 
 # Editor directories and files
-.vscode/*
-!.vscode/extensions.json
 .idea
-.DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
