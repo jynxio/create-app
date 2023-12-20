@@ -1,0 +1,41 @@
+{
+	"name": "vue3-template",
+	"private": true,
+	"version": "0.1.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vue-tsc && vite build",
+		"preview": "vite preview",
+		"lint": "npm run prettier && npm run eslint && npm run stylelint",
+		"prettier": "prettier . --write",
+		"eslint": "eslint --ext .js,.ts,.jsx,.tsx,.vue --ignore-path .gitignore src --fix",
+		"stylelint": "stylelint \"**/*.{css,scss,sass,less,vue}\" --fix"
+	},
+	"dependencies": {
+		"vue": "^3.3.13"
+	},
+	"devDependencies": {
+		"@types/node": "^20.10.5",
+		"@typescript-eslint/eslint-plugin": "^6.15.0",
+		"@typescript-eslint/parser": "^6.15.0",
+		"@vitejs/plugin-vue": "^4.5.2",
+		"autoprefixer": "^10.4.16",
+		"eslint": "^8.56.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-prettier": "^5.1.0",
+		"eslint-plugin-vue": "^9.19.2",
+		"postcss": "^8.4.32",
+		"postcss-html": "^1.5.0",
+		"postcss-nested": "^6.0.1",
+		"postcss-preset-env": "^9.3.0",
+		"prettier": "^3.1.1",
+		"stylelint": "^16.0.2",
+		"stylelint-config-standard": "^35.0.0",
+		"stylelint-config-standard-vue": "^1.0.0",
+		"typescript": "^5.3.3",
+		"vite": "^5.0.10",
+		"vue-eslint-parser": "^9.3.2",
+		"vue-tsc": "^1.8.25"
+	}
+}
