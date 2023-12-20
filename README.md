@@ -1,10 +1,12 @@
 ## Overview
 
-Project Template Starter that suits your personal style. Currently the following templates are supported:
+My personal style project template starter, currently supporting the following:
 
-- Vue (TypeScript)
-- React (TypeScript)
-- Solid (TypeScript)
+> If you want to get the template directly, please see the `template-*` file in the current directory.
+
+- `Vue`
+- `React`
+- `Solid`
 
 <br />
 
