@@ -1,12 +1,12 @@
 {
-  "name": "create-jynxio",
+  "name": "@jynxio/create-app",
   "author": "Jynxio",
-  "description": "Scaffold for creating project templates",
+  "description": "A CLI tool for creating app templates interactively.",
   "version": "0.1.0",
   "license": "MIT",
   "type": "module",
   "bin": {
-    "create-jynxio": "./index.js"
+    "create-app": "./index.js"
   },
   "exports": {
     ".": {
@@ -20,8 +20,7 @@
   "files": [
     "dist",
     "index.js",
-    "template-*",
-    "README.md"
+    "template-*"
   ],
   "engines": {
     "node": ">=18"
