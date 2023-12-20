@@ -7,10 +7,10 @@
 		"dev": "vite",
 		"build": "vue-tsc && vite build",
 		"preview": "vite preview",
-		"lint": "npm run prettier && npm run eslint && npm run stylelint",
-		"prettier": "prettier . --write",
-		"eslint": "eslint --ext .js,.ts,.jsx,.tsx,.vue --ignore-path .gitignore src --fix",
-		"stylelint": "stylelint \"**/*.{css,scss,sass,less,postcss,vue}\" --fix"
+		"fix": "npm run lint:js && npm run lint:css && npm run format",
+		"format": "prettier --write .",
+		"lint:js": "eslint \"**/*.{js,jsx,ts,tsx,vue}\" --fix",
+		"lint:css": "stylelint \"**/*.{css,scss,sass,less,postcss,vue}\" --fix"
 	},
 	"dependencies": {
 		"vue": "^3.3.13"
