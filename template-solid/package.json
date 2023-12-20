@@ -1,0 +1,37 @@
+{
+	"name": "template",
+	"private": true,
+	"version": "0.1.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"preview": "vite preview",
+		"lint": "npm run prettier && npm run eslint && npm run stylelint",
+		"prettier": "prettier . --write",
+		"eslint": "eslint --ext .js,.ts,.jsx,.tsx --ignore-path .gitignore src --fix",
+		"stylelint": "stylelint \"**/*.{css,scss,sass,less,postcss}\" --fix"
+	},
+	"dependencies": {
+		"solid-js": "^1.8.7"
+	},
+	"devDependencies": {
+		"@types/node": "^20.10.5",
+		"@typescript-eslint/eslint-plugin": "^6.15.0",
+		"@typescript-eslint/parser": "^6.15.0",
+		"autoprefixer": "^10.4.16",
+		"eslint": "^8.56.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-prettier": "^5.1.0",
+		"eslint-plugin-solid": "^0.13.0",
+		"postcss": "^8.4.32",
+		"postcss-nested": "^6.0.1",
+		"postcss-preset-env": "^9.3.0",
+		"prettier": "^3.1.1",
+		"stylelint": "^16.0.2",
+		"stylelint-config-standard": "^35.0.0",
+		"typescript": "^5.3.3",
+		"vite": "^5.0.10",
+		"vite-plugin-solid": "^2.8.0"
+	}
+}
