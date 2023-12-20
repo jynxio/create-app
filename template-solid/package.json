@@ -9,8 +9,8 @@
 		"preview": "vite preview",
 		"lint": "npm run prettier && npm run eslint && npm run stylelint",
 		"prettier": "prettier . --write",
-		"eslint": "eslint --ext .js,.ts,.jsx,.tsx --ignore-path .gitignore src --fix",
-		"stylelint": "stylelint \"**/*.{css,scss,sass,less,postcss}\" --fix"
+		"eslint": "eslint --ext .js,.ts,.jsx,.tsx,.vue --ignore-path .gitignore src --fix",
+		"stylelint": "stylelint \"**/*.{css,scss,sass,less,postcss,vue}\" --fix"
 	},
 	"dependencies": {
 		"solid-js": "^1.8.7"
