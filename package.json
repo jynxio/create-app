@@ -27,7 +27,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jynxio/create-jynxio"
+    "url": "https://github.com/jynxio/create-app"
   },
   "scripts": {
     "build": "unbuild"
