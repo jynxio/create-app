@@ -37,9 +37,8 @@
 	"homepage": "https://github.com/jynxio/create-app",
 	"scripts": {
 		"build": "unbuild",
-		"lint": "npm run prettier && npm run eslint",
-		"prettier": "prettier . --write",
-		"eslint": "eslint --ext .js,.ts,.jsx,.tsx,.vue --ignore-path .gitignore src --fix"
+		"format": "prettier --write .",
+		"eslint": "eslint . --ext .js,.jsx,.ts,.tsx"
 	},
 	"devDependencies": {
 		"@types/fs-extra": "^11.0.4",
