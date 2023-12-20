@@ -37,8 +37,9 @@
 	"homepage": "https://github.com/jynxio/create-app",
 	"scripts": {
 		"build": "unbuild",
+		"fix": "npm run lint:js && npm run format",
 		"format": "prettier --write .",
-		"eslint": "eslint . --ext .js,.jsx,.ts,.tsx"
+		"lint:js": "eslint \"**/*.{js,jsx,ts,tsx}\" --fix"
 	},
 	"devDependencies": {
 		"@types/fs-extra": "^11.0.4",
