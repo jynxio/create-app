@@ -1,47 +1,62 @@
 {
-  "name": "@jynxio/create-app",
-  "author": "Jynxio",
-  "description": "A CLI tool for creating app templates interactively.",
-  "version": "0.1.0",
-  "license": "MIT",
-  "type": "module",
-  "bin": {
-    "create-app": "./index.js"
-  },
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs"
-    }
-  },
-  "main": "./dist/index.mjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "files": [
-    "dist",
-    "index.js",
-    "template-*"
-  ],
-  "engines": {
-    "node": ">=18"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jynxio/create-app"
-  },
-  "scripts": {
-    "build": "unbuild"
-  },
-  "devDependencies": {
-    "@types/fs-extra": "^11.0.4",
-    "@types/node": "^20.10.5",
-    "@types/prompts": "^2.4.9",
-    "typescript": "^5.3.3",
-    "unbuild": "^2.0.0"
-  },
-  "dependencies": {
-    "fs-extra": "^11.2.0",
-    "kolorist": "^1.8.0",
-    "prompts": "^2.4.2"
-  }
+	"name": "@jynxio/create-app",
+	"author": "Jynxio",
+	"description": "A CLI tool for creating app templates interactively.",
+	"version": "0.1.0",
+	"license": "MIT",
+	"type": "module",
+	"bin": {
+		"create-app": "./index.js"
+	},
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.mjs"
+		}
+	},
+	"main": "./dist/index.mjs",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.ts",
+	"files": [
+		"dist",
+		"index.js",
+		"template-vue",
+		"template-react",
+		"template-solid"
+	],
+	"engines": {
+		"node": "^18.0.0 || >=20.0.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jynxio/create-app"
+	},
+	"bugs": {
+		"url": "https://github.com/jynxio/create-app/issues"
+	},
+	"homepage": "https://github.com/jynxio/create-app",
+	"scripts": {
+		"build": "unbuild",
+		"lint": "npm run prettier && npm run eslint",
+		"prettier": "prettier . --write",
+		"eslint": "eslint --ext .js,.ts,.jsx,.tsx,.vue --ignore-path .gitignore src --fix"
+	},
+	"devDependencies": {
+		"@types/fs-extra": "^11.0.4",
+		"@types/node": "^20.10.5",
+		"@types/prompts": "^2.4.9",
+		"@typescript-eslint/eslint-plugin": "^6.15.0",
+		"@typescript-eslint/parser": "^6.15.0",
+		"eslint": "^8.56.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-prettier": "^5.1.0",
+		"prettier": "^3.1.1",
+		"typescript": "^5.3.3",
+		"unbuild": "^2.0.0"
+	},
+	"dependencies": {
+		"fs-extra": "^11.2.0",
+		"kolorist": "^1.8.0",
+		"prompts": "^2.4.2"
+	}
 }
