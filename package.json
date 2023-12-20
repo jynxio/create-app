@@ -39,7 +39,8 @@
 		"build": "unbuild",
 		"fix": "npm run lint:js && npm run format",
 		"format": "prettier --write .",
-		"lint:js": "eslint \"**/*.{js,jsx,ts,tsx}\" --fix"
+		"lint:js": "eslint \"**/*.{js,jsx,ts,tsx}\" --fix",
+		"release": "npm publish --access public"
 	},
 	"devDependencies": {
 		"@types/fs-extra": "^11.0.4",
