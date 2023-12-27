@@ -6,9 +6,9 @@
 		"node": true
 	},
 	"extends": [
-		"plugin:vue/vue3-recommended",
 		"eslint:recommended",
 		"plugin:@typescript-eslint/recommended",
+		"plugin:vue/vue3-recommended",
 		"plugin:prettier/recommended"
 	],
 	"plugins": ["@typescript-eslint", "vue"],
