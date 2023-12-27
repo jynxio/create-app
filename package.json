@@ -20,9 +20,18 @@
 	"files": [
 		"dist",
 		"index.js",
-		"template-vue",
 		"template-react",
-		"template-solid"
+		"template-react/.gitignore",
+		"!template-react/pnpm-lock.yaml",
+		"!template-react/package-lock.json",
+		"template-solid",
+		"template-solid/.gitignore",
+		"!template-solid/pnpm-lock.yaml",
+		"!template-solid/package-lock.json",
+		"template-vue",
+		"template-vue/.gitignore",
+		"!template-vue/pnpm-lock.yaml",
+		"!template-vue/package-lock.json"
 	],
 	"engines": {
 		"node": "^18.0.0 || >=20.0.0"

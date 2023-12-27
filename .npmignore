@@ -1,0 +1,2 @@
+# 默认的文件过滤策略 https://docs.npmjs.com/cli/v10/using-npm/developers#keeping-files-out-of-your-package
+# 此文件用于屏蔽.gitignore
