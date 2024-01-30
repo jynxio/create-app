@@ -66,6 +66,7 @@ import { fileURLToPath } from 'node:url';
 	try {
 		await fs.copy(templatePath, projectPath);
 		console.log('创建成功');
+		console.log('如果你在使用git，那么请执行`npx husky init`以初始化husky（小心！.husky的内容或将会被覆写）');
 	} catch (error) {
 		console.error('创建失败：', error);
 	}
