@@ -14,7 +14,7 @@ import { fileURLToPath } from 'node:url';
 		const response = await prompts({
 			type: 'text',
 			name: 'value',
-			message: '请输入项目名称:',
+			message: '请输入项目名称: ',
 		});
 
 		//
@@ -45,7 +45,7 @@ import { fileURLToPath } from 'node:url';
 	const response = await prompts({
 		type: 'select',
 		name: 'value',
-		message: '请选择项目模板',
+		message: '请选择项目模板: ',
 		choices: [
 			{ title: 'Vue', value: 'vue' },
 			{ title: 'React', value: 'react' },
