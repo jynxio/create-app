@@ -2,7 +2,7 @@
     "name": "@jynxio/create-app",
     "author": "Jynxio",
     "description": "A CLI tool for creating app templates interactively",
-    "version": "0.3.1",
+    "version": "0.4.0",
     "license": "MIT",
     "type": "module",
     "bin": {
@@ -47,7 +47,7 @@
     "scripts": {
         "build": "unbuild",
         "prerelease": "npm run build",
-        "release": "npm run build && npm publish --access public",
+        "release": "npm publish --access public",
         "lint:js": "eslint \"**/*.{js,jsx,ts,tsx}\" --fix",
         "lint:style": "prettier --write .",
         "lint:all": "npm run lint:js && npm run lint:style",
