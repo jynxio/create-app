@@ -1,5 +1,5 @@
 <template>
-	<button :class="$style.button" @click="count++">{{ count }}</button>
+    <button :class="$style.button" @click="count++">{{ count }}</button>
 </template>
 
 <script setup lang="ts">
@@ -10,12 +10,12 @@ const count = ref(0);
 
 <style module>
 .button {
-	position: fixed;
-	inset: 0;
-	block-size: 2rem;
-	inline-size: 5rem;
-	margin: auto;
-	cursor: pointer;
-	user-select: none;
+    position: fixed;
+    inset: 0;
+    block-size: 2rem;
+    inline-size: 5rem;
+    margin: auto;
+    cursor: pointer;
+    user-select: none;
 }
 </style>
