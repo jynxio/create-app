@@ -1,15 +1,15 @@
 import { defineBuildConfig } from 'unbuild';
 
 export default defineBuildConfig({
-	entries: ['src/index'],
-	outDir: './dist',
-	clean: true,
-	rollup: {
-		inlineDependencies: true,
-		esbuild: {
-			target: 'node18',
-			minify: true,
-		},
-	},
-	declaration: true,
+    entries: ['src/index'],
+    outDir: './dist',
+    clean: true,
+    rollup: {
+        inlineDependencies: true,
+        esbuild: {
+            target: 'node18',
+            minify: true,
+        },
+    },
+    declaration: true,
 });
