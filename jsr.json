@@ -1,0 +1,23 @@
+{
+    "name": "@jynxio/create-app",
+    "version": "0.4.1",
+    "exports": "./dist/index.mjs",
+    "include": [
+        "dist",
+        "index.js",
+        "template-react",
+        "template-react/.gitignore",
+        "template-solid",
+        "template-solid/.gitignore",
+        "template-vue",
+        "template-vue/.gitignore"
+    ],
+    "exclude": [
+        "template-react/pnpm-lock.yaml",
+        "template-react/package-lock.json",
+        "template-solid/pnpm-lock.yaml",
+        "template-solid/package-lock.json",
+        "template-vue/pnpm-lock.yaml",
+        "template-vue/package-lock.json"
+    ]
+}
