@@ -2,7 +2,7 @@
     "name": "@jynxio/create-app",
     "author": "Jynxio",
     "description": "A CLI tool for creating app templates interactively",
-    "version": "0.4.1",
+    "version": "0.5.0",
     "license": "MIT",
     "type": "module",
     "bin": {
@@ -60,7 +60,6 @@
         "@commitlint/config-conventional": "^19.0.3",
         "@types/fs-extra": "^11.0.4",
         "@types/node": "^20.11.24",
-        "@types/prompts": "^2.4.9",
         "@typescript-eslint/eslint-plugin": "^7.1.0",
         "@typescript-eslint/parser": "^7.1.0",
         "eslint": "^8.57.0",
@@ -73,8 +72,9 @@
         "unbuild": "^2.0.0"
     },
     "dependencies": {
-        "fs-extra": "^11.2.0",
-        "kolorist": "^1.8.0",
-        "prompts": "^2.4.2"
+        "@inquirer/input": "^2.1.1",
+        "@inquirer/select": "^2.2.1",
+        "chalk": "^5.3.0",
+        "fs-extra": "^11.2.0"
     }
 }
