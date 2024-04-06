@@ -31,7 +31,11 @@
         "template-vue",
         "template-vue/.gitignore",
         "!template-vue/pnpm-lock.yaml",
-        "!template-vue/package-lock.json"
+        "!template-vue/package-lock.json",
+        "template-vanilla",
+        "template-vanilla/.gitignore",
+        "!template-vanilla/pnpm-lock.yaml",
+        "!template-vanilla/package-lock.json"
     ],
     "engines": {
         "node": "^18.0.0 || >=20.0.0"
