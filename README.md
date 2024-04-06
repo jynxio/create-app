@@ -1,27 +1,15 @@
-## Overview
+<h3 align="center">
+  <code>npm create @jynxio/app</code>
+</h3>
+<p align="center">
+  <samp>Then create a project template in the CLI</samp>
+</p>
 
-My personal style project template starter, currently supporting the following:
+<h2 align="center"><samp>Why?</samp></h2>
+<p align="center">
+  <samp>Because I'm tired of repeatedly configuring ESLint, Stylelint, Prettier, TypeScript, and other scaffolding tools for new projects.</samp>
+</p>
 
-> If you want to get the template directly, please see the `template-*` file in the current directory.
-
-- `Vue`
-- `React`
-- `Solid`
-
-<br />
-
-## Usage
-
-Execute the following command and create the template of your choice interactively:
-
-```
-npm create @jynxio/app
-```
-
-<br />
-
-## License
-
-This project follows the [MIT](https://github.com/jynxio/create-app/blob/main/LICENSE) license.
-
-<br />
+<p align="center">
+  <img akt="" src="./readme.png" width="260" />
+</p>
