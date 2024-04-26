@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "astro-build.astro-vscode",
+    "unifiedjs.vscode-mdx",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "stylelint.vscode-stylelint",
+    "ms-vscode.vscode-typescript-next"
+  ],
+  "unwantedRecommendations": []
+}
