@@ -43,7 +43,7 @@ import { fileURLToPath } from 'node:url';
                     message: (text: string) => text,
                     answer: (text: string) => ' ' + text.trim(),
                     highlight: (text: string) => {
-                        const lang = text.trim() as 'vue' | 'react' | 'solid' | 'vanilla';
+                        const lang = text.trim() as 'vue' | 'react' | 'solid' | 'astro' | 'vanilla';
                         const newText = `       * ${lang}`;
 
                         return chalk.hex(color[lang])(newText);
@@ -63,6 +63,10 @@ import { fileURLToPath } from 'node:url';
                 {
                     name: '       solid',
                     value: 'solid',
+                },
+                {
+                    name: '       astro',
+                    value: 'astro',
                 },
                 {
                     name: '       vanilla',
