@@ -1,1 +1,0 @@
-<h3 align="center"><samp>✨ Brand New Blog ✨</samp></h3>
