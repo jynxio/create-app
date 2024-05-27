@@ -1,0 +1,15 @@
+.text {
+    position: fixed;
+    inset: 0;
+    block-size: fit-content;
+    inline-size: fit-content;
+    margin: auto;
+    color: white;
+    font-size: 2.5rem;
+    font-family: monospace;
+    font-weight: 100;
+
+    @media (width <= 500px) {
+        font-size: 1.25rem;
+    }
+}

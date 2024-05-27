@@ -1,0 +1,64 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    line-height: calc(1em + 0.5rem);
+}
+
+html,
+body {
+    height: 100%;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* stylelint-disable-next-line value-keyword-case */
+    text-rendering: optimizeSpeed;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+p {
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+/* stylelint-disable-next-line selector-id-pattern */
+#root,
+#__next {
+    isolation: isolate;
+}
