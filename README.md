@@ -30,6 +30,7 @@
 
 [tmpl] Select a template:
          * vue
+           next
            react
            solid
            astro
