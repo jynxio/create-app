@@ -5,6 +5,7 @@ import input from '@inquirer/input';
 import select from '@inquirer/select';
 import createRandomString from './createRandomString.js';
 import color from './color.js';
+import names from './names.js';
 import { cwd } from 'node:process';
 import { fileURLToPath } from 'node:url';
 
@@ -34,7 +35,11 @@ import { fileURLToPath } from 'node:url';
     console.log('\n');
 
     async function queryTemplateName() {
+        const leadingSpace = ' '.repeat(7);
+        const choices = names.map(name => ({ name: leadingSpace + name, value: name }));
+
         return await select({
+            choices,
             message: 'Select a template:',
             theme: {
                 prefix: createTag(' tmpl '),
@@ -43,36 +48,14 @@ import { fileURLToPath } from 'node:url';
                     message: (text: string) => text,
                     answer: (text: string) => ' ' + text.trim(),
                     highlight: (text: string) => {
-                        const lang = text.trim() as 'vue' | 'react' | 'solid' | 'astro' | 'vanilla';
-                        const newText = `       * ${lang}`;
+                        const lang = text.trim() as (typeof names)[number];
+                        const newText = leadingSpace + '* ' + lang;
 
                         return chalk.hex(color[lang])(newText);
                     },
                 },
                 icon: { cursor: '' },
             },
-            choices: [
-                {
-                    name: '       vue',
-                    value: 'vue',
-                },
-                {
-                    name: '       react',
-                    value: 'react',
-                },
-                {
-                    name: '       solid',
-                    value: 'solid',
-                },
-                {
-                    name: '       astro',
-                    value: 'astro',
-                },
-                {
-                    name: '       vanilla',
-                    value: 'vanilla',
-                },
-            ],
         });
     }
 

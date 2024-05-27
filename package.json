@@ -2,7 +2,7 @@
     "name": "@jynxio/create-app",
     "author": "Jynxio",
     "description": "A CLI tool for creating app templates interactively",
-    "version": "0.6.0",
+    "version": "0.7.0",
     "license": "MIT",
     "type": "module",
     "bin": {
@@ -39,7 +39,11 @@
         "template-vanilla",
         "template-vanilla/.gitignore",
         "!template-vanilla/pnpm-lock.yaml",
-        "!template-vanilla/package-lock.json"
+        "!template-vanilla/package-lock.json",
+        "template-next",
+        "template-next/.gitignore",
+        "!template-next/pnpm-lock.yaml",
+        "!template-next/package-lock.json"
     ],
     "engines": {
         "node": "^18.0.0 || >=20.0.0"
