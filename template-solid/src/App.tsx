@@ -1,14 +1,18 @@
-import style from './App.module.css';
-import { createSignal } from 'solid-js';
+import style from "./App.module.css";
+import { createSignal } from "solid-js";
 
 function App() {
-    const [getCount, setCount] = createSignal(0);
+	const [getCount, setCount] = createSignal(0);
 
-    return (
-        <button class={style.button} onClick={() => setCount(prev => prev + 1)}>
-            {getCount()}
-        </button>
-    );
+	return (
+		<button
+			class={style.button}
+			onClick={() => setCount((prev) => prev + 1)}
+			type="button"
+		>
+			{getCount()}
+		</button>
+	);
 }
 
 export default App;

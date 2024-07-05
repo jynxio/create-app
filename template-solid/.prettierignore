@@ -1,10 +1,16 @@
 # Development
 **/.git
+**/.next
+**/.vercel
 **/node_modules
 
 # Production
-**/dist*/
-**/build*/
+**/out
+**/dist
+**/build
+
+# Vercel
+**/.vercel
 
 # Markdown
 **/*.md
