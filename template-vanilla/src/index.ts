@@ -1,2 +1,2 @@
-import '@/reset.css';
-import '@/index.css';
+import "@/reset.css";
+import "@/index.css";
