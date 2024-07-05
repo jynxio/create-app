@@ -1,17 +1,22 @@
-* {
-    margin: 0;
-}
-
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    line-height: calc(1em + 0.5rem);
+
+    /* No more lonely words at the end of paragraphs */
+    text-wrap: pretty;
+}
+
 html,
 body {
-    min-block-size: 100vh;
-    min-block-size: 100dvh;
+    height: 100%;
 }
 
 html:focus-within {
@@ -19,7 +24,6 @@ html:focus-within {
 }
 
 body {
-    line-height: 1.5;
     /* stylelint-disable-next-line value-keyword-case */
     text-rendering: optimizeSpeed;
     -webkit-font-smoothing: antialiased;
@@ -42,20 +46,18 @@ select {
     font: inherit;
 }
 
-p,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
+    /*  Make title look much better. */
+    text-wrap: balance;
     overflow-wrap: break-word;
 }
 
 p {
+    overflow-wrap: break-word;
     hyphens: auto;
-}
-
-a:not([class]) {
-    text-decoration-skip-ink: auto;
 }
