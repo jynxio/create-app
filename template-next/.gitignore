@@ -16,8 +16,9 @@ package-lock.json
 /coverage
 
 # Production
-**/dist*/
-**/build*/
+**/out
+**/dist
+**/build
 
 # Editor directories and files
 .idea
@@ -34,8 +35,8 @@ package-lock.json
 .LSOverride
 
 # Next.js
-/.next/
-/out/
+**/out
+**/.next
 
 # Local env files
 .env.local
@@ -44,4 +45,4 @@ package-lock.json
 .env.production.local
 
 # Vercel
-.vercel
+**/.vercel

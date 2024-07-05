@@ -2,7 +2,7 @@
 const nextConfig = {
     experimental: {
         outputFileTracingIncludes: {
-            '/*': ['./content/**/*'],
+            "/*": ["./content/**/*"],
         },
     },
     reactStrictMode: true,

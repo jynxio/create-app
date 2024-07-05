@@ -1,1 +1,1 @@
-export const baseUrl = 'https://www.your-domain.com';
+export const baseUrl = "https://www.your-domain.com";

@@ -1,5 +1,5 @@
 {
-    "*.{js,jsx,ts,tsx}": ["eslint --fix"],
+    "*.{js,ts,mjs,mts,jsx,tsx,json,jsonc}": ["biome lint --write", "biome format --write"],
     "*.{css,scss,sass,less,postcss}": ["stylelint --fix"],
-    "*.{js,jsx,ts,tsx,css,scss,sass,less,postcss,json}": ["prettier --write"]
+    "*.{html,vue,xml,yml,yaml,css,scss,sass,less,postcss}": ["prettier --write"]
 }

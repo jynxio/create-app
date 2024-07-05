@@ -3,7 +3,7 @@
     "endOfLine": "lf",
     "tabWidth": 4,
     "useTabs": false,
-    "printWidth": 120,
+    "printWidth": 100,
     "singleQuote": true,
     "jsxSingleQuote": false,
     "quoteProps": "consistent",
