@@ -11,10 +11,14 @@ lerna-debug.log*
 *.local
 node_modules
 package-lock.json
+.pnp
+.pnp.js
+/coverage
 
 # Production
-**/dist*/
-**/build*/
+**/out
+**/dist
+**/build
 
 # Editor directories and files
 .idea
@@ -25,6 +29,7 @@ package-lock.json
 *.sw?
 
 # MacOS
+*.pem
 .DS_Store
 .AppleDouble
 .LSOverride

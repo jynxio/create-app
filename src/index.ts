@@ -1,17 +1,17 @@
-import fs from 'fs-extra';
-import path from 'node:path';
-import chalk from 'chalk';
-import input from '@inquirer/input';
-import select from '@inquirer/select';
-import createRandomString from './createRandomString.js';
-import color from './color.js';
-import names from './names.js';
-import { cwd } from 'node:process';
-import { fileURLToPath } from 'node:url';
+import fs from "fs-extra";
+import path from "node:path";
+import chalk from "chalk";
+import input from "@inquirer/input";
+import select from "@inquirer/select";
+import createRandomString from "./createRandomString.js";
+import color from "./color.js";
+import names from "./names.js";
+import { cwd } from "node:process";
+import { fileURLToPath } from "node:url";
 
-(async function () {
-    console.log('\n');
-    console.log(chalk(createTag(' init ') + chalk.hex(color.grey)(' - @jynxio/create-app -')));
+(async () => {
+    console.log("\n");
+    console.log(chalk(createTag(" init ") + chalk.hex(color.grey)(" - @jynxio/create-app -")));
     console.log();
 
     const templateName = await queryTemplateName();
@@ -22,67 +22,74 @@ import { fileURLToPath } from 'node:url';
     try {
         await cloneProject(templateName, folderName);
 
-        console.log(chalk(createTag(' done ') + chalk.hex(color.grey)(' - @jynxio/create-app -')));
+        console.log(chalk(createTag(" done ") + chalk.hex(color.grey)(" - @jynxio/create-app -")));
         console.log();
-        console.log(chalk(createTag(' next ') + chalk.hex(color.grey)(' Run these command to start:')));
+        console.log(
+            chalk(createTag(" next ") + chalk.hex(color.grey)(" Run these command to start:")),
+        );
         console.log(chalk.hex(color.grey)(`       1. cd ./${folderName}`));
-        console.log(chalk.hex(color.grey)('       2. npm install'));
-        console.log(chalk.hex(color.grey)('       3. npm dev'));
+        console.log(chalk.hex(color.grey)("       2. npm install"));
+        console.log(chalk.hex(color.grey)("       3. npm dev"));
     } catch {
-        console.log(chalk(createTag(' bomb ') + createErrMsg(' Failed! Issues occurred during creation...')));
+        console.log(
+            chalk(
+                createTag(" bomb ") + createErrMsg(" Failed! Issues occurred during creation..."),
+            ),
+        );
     }
 
-    console.log('\n');
+    console.log("\n");
 
     async function queryTemplateName() {
-        const leadingSpace = ' '.repeat(7);
-        const choices = names.map(name => ({ name: leadingSpace + name, value: name }));
+        const leadingSpace = " ".repeat(7);
+        const choices = names.map((name) => ({ name: leadingSpace + name, value: name }));
 
         return await select({
             choices,
-            message: 'Select a template:',
+            message: "Select a template:",
             theme: {
-                prefix: createTag(' tmpl '),
+                prefix: createTag(" tmpl "),
                 style: {
-                    help: () => '',
+                    help: () => "",
                     message: (text: string) => text,
-                    answer: (text: string) => ' ' + text.trim(),
+                    answer: (text: string) => ` ${text.trim()}`,
                     highlight: (text: string) => {
                         const lang = text.trim() as (typeof names)[number];
-                        const newText = leadingSpace + '* ' + lang;
+                        const newText = `${leadingSpace}* ${lang}`;
 
                         return chalk.hex(color[lang])(newText);
                     },
                 },
-                icon: { cursor: '' },
+                icon: { cursor: "" },
             },
         });
     }
 
     async function queryfolderName() {
-        let folderName = '';
+        let folderName = "";
 
         for (;;) {
             console.log();
             folderName = await input({
-                message: 'Enter a file name: ',
+                message: "Enter a file name: ",
                 default: createRandomString(),
                 theme: {
-                    prefix: createTag(' name '),
+                    prefix: createTag(" name "),
                     style: {
                         message: (text: string) => text,
                         answer: (text: string) => {
                             const folderName = text;
 
                             // Check: is folderName empty?
-                            const isEmpty = folderName === '';
+                            const isEmpty = folderName === "";
 
-                            if (isEmpty) return createErrMsg('your input is empty');
+                            if (isEmpty) return createErrMsg("your input is empty");
 
                             // Check: is folderName exist?
                             const isExist = isFolderExist(path.join(cwd(), folderName));
 
-                            if (isExist) return createErrMsg(`your input ("${folderName}") already exists`);
+                            if (isExist)
+                                return createErrMsg(`your input ("${folderName}") already exists`);
 
                             // Correct!
                             return text;
@@ -92,7 +99,7 @@ import { fileURLToPath } from 'node:url';
                 },
             });
 
-            if (folderName === '') continue;
+            if (folderName === "") continue;
             if (isFolderExist(path.join(cwd(), folderName))) continue;
 
             break;
