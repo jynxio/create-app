@@ -1,21 +1,29 @@
 {
     "compilerOptions": {
-        "target": "ES2022",
-        "module": "ESNext",
-        "lib": ["ES2023"],
+        "target": "ES2015",
+        "module": "ES2015",
+        "lib": ["ESNext", "DOM", "DOM.Iterable"],
         "skipLibCheck": true,
+        "useDefineForClassFields": true,
 
         "moduleResolution": "bundler",
         "allowImportingTsExtensions": true,
+        "resolveJsonModule": true,
         "isolatedModules": true,
         "moduleDetection": "force",
         "noEmit": true,
+
+        "jsx": "react-jsx",
 
         "strict": true,
         "noUnusedLocals": true,
         "noUnusedParameters": true,
         "noFallthroughCasesInSwitch": true,
-        "noUncheckedSideEffectImports": true
+        "noUncheckedSideEffectImports": true,
+        "paths": {
+            "@/*": ["./src/*"],
+            "$/*": ["./*"]
+        }
     },
-    "include": ["vite.config.ts"]
+    "include": ["src"]
 }

@@ -1,27 +1,4 @@
 {
-	"compilerOptions": {
-		"target": "ES2015",
-		"module": "ES2015",
-		"lib": ["ESNext", "DOM", "DOM.Iterable", "WebWorker"],
-		"skipLibCheck": true,
-		"useDefineForClassFields": true,
-
-		"moduleResolution": "bundler",
-		"allowImportingTsExtensions": true,
-		"resolveJsonModule": true,
-		"isolatedModules": true,
-		"noEmit": true,
-		"jsx": "react-jsx",
-
-		"strict": true,
-		"noUnusedLocals": true,
-		"noUnusedParameters": true,
-		"noFallthroughCasesInSwitch": true,
-		"paths": {
-			"@/*": ["./src/*"],
-			"$/*": ["./*"]
-		}
-	},
-	"include": ["src"],
-	"references": [{ "path": "./tsconfig.node.json" }]
+    "files": [],
+    "references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.node.json" }]
 }
