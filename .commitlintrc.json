@@ -8,7 +8,6 @@
         ],
         "subject-empty": [2, "never"],
         "scope-empty": [2, "always"],
-        "header-case": [2, "always", "lower-case"],
         "header-max-length": [2, "always", 72]
     }
 }
