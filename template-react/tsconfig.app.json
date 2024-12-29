@@ -1,29 +1,33 @@
 {
     "compilerOptions": {
+        /* Base */
         "target": "ES2015",
-        "module": "ES2015",
+        "module": "ESNext",
         "lib": ["ESNext", "DOM", "DOM.Iterable"],
-        "skipLibCheck": true,
-        "useDefineForClassFields": true,
 
+        "noEmit": true,
+        "allowJs": true,
+        "skipLibCheck": true,
+        "removeComments": true,
+        "esModuleInterop": true,
+        "isolatedModules": true,
+        "resolveJsonModule": true,
+        "moduleDetection": "force",
+        "verbatimModuleSyntax": true,
         "moduleResolution": "bundler",
         "allowImportingTsExtensions": true,
-        "resolveJsonModule": true,
-        "isolatedModules": true,
-        "moduleDetection": "force",
-        "noEmit": true,
 
         "jsx": "react-jsx",
+        "paths": { "@/*": ["./src/*"], "$/*": ["./*"] },
 
+        /* Strictness */
         "strict": true,
         "noUnusedLocals": true,
         "noUnusedParameters": true,
+        "noImplicitOverride": true,
+        "noUncheckedIndexedAccess": true,
         "noFallthroughCasesInSwitch": true,
-        "noUncheckedSideEffectImports": true,
-        "paths": {
-            "@/*": ["./src/*"],
-            "$/*": ["./*"]
-        }
+        "noUncheckedSideEffectImports": true
     },
     "include": ["src"]
 }

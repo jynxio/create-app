@@ -1,19 +1,28 @@
 {
     "compilerOptions": {
+        /* Base */
         "target": "ES2022",
         "module": "ESNext",
-        "lib": ["ES2023"],
-        "skipLibCheck": true,
+        "lib": ["ESNext"],
 
+        "noEmit": true,
+        "allowJs": true,
+        "skipLibCheck": true,
+        "removeComments": true,
+        "esModuleInterop": true,
+        "isolatedModules": true,
+        "resolveJsonModule": true,
+        "moduleDetection": "force",
+        "verbatimModuleSyntax": true,
         "moduleResolution": "bundler",
         "allowImportingTsExtensions": true,
-        "isolatedModules": true,
-        "moduleDetection": "force",
-        "noEmit": true,
 
+        /* Strictness */
         "strict": true,
         "noUnusedLocals": true,
         "noUnusedParameters": true,
+        "noImplicitOverride": true,
+        "noUncheckedIndexedAccess": true,
         "noFallthroughCasesInSwitch": true,
         "noUncheckedSideEffectImports": true
     },
