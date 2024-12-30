@@ -1,15 +1,9 @@
-.text {
+.button {
     position: fixed;
     inset: 0;
-    block-size: fit-content;
-    inline-size: fit-content;
+    block-size: 2rem;
+    inline-size: 5rem;
     margin: auto;
-    color: white;
-    font-size: 2.5rem;
-    font-family: monospace;
-    font-weight: 100;
-
-    @media (width <= 500px) {
-        font-size: 1.25rem;
-    }
+    cursor: pointer;
+    user-select: none;
 }

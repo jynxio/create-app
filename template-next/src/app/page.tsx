@@ -1,8 +1,16 @@
-import css from "./page.module.css";
-import React from "react";
+'use client';
 
-function Home() {
-    return <h1 className={css.text}>{"✨ Hi, how are you ✨"}</h1>;
+import React from 'react';
+import css from './page.module.css';
+
+function App() {
+    const [count, setCount] = React.useState(0);
+
+    return (
+        <button className={css.button} onClick={() => setCount(count + 1)}>
+            {count}
+        </button>
+    );
 }
 
-export default Home;
+export default App;
