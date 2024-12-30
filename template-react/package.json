@@ -1,5 +1,5 @@
 {
-    "name": "template",
+    "name": "boilerplate-react",
     "private": true,
     "version": "0.1.0",
     "type": "module",
@@ -40,7 +40,6 @@
         "eslint-config-prettier": "^9.1.0",
         "eslint-plugin-react": "^7.37.2",
         "eslint-plugin-react-hooks": "^5.1.0",
-        "eslint-plugin-react-refresh": "^0.4.16",
         "globals": "^15.13.0",
         "husky": "^9.1.7",
         "lint-staged": "^15.2.11",

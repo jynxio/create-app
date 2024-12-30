@@ -1,14 +1,13 @@
-import globals from 'globals';
 import pluginVanilla from '@eslint/js';
-import tseslint from 'typescript-eslint';
+import pluginPrettier from 'eslint-config-prettier';
 import pluginReact from 'eslint-plugin-react';
-import reactRefresh from 'eslint-plugin-react-refresh';
-import reactHook from 'eslint-plugin-react-hooks';
-import eslintConfigPrettier from 'eslint-config-prettier';
+import pluginReactHook from 'eslint-plugin-react-hooks';
+import globals from 'globals';
+import pluginTypescript from 'typescript-eslint';
 
-const reactHookWrapper = {
-    plugins: { 'react-hooks': reactHook },
-    rules: reactHook.configs.recommended.rules,
+const pluginReactHookWrapper = {
+    plugins: { 'react-hooks': pluginReactHook },
+    rules: pluginReactHook.configs.recommended.rules,
 };
 
 /** @type {import('eslint').Linter.Config[]} */
@@ -16,14 +15,13 @@ export default [
     {
         files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
         ignores: ['**/out', '**/dist*/', '**/build*/', '**/.vercel'],
+        languageOptions: { globals: { ...globals.browser, ...globals.node } },
     },
-    { languageOptions: { globals: { ...globals.browser, ...globals.node } } },
     pluginVanilla.configs.recommended,
-    eslintConfigPrettier,
-    ...tseslint.configs.recommended,
+    pluginPrettier,
+    ...pluginTypescript.configs.recommended,
     pluginReact.configs.flat.recommended,
-    reactRefresh.configs.recommended,
-    reactHookWrapper,
+    pluginReactHookWrapper,
     {
         rules: {
             'no-unused-expressions': 'off',
