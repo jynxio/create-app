@@ -2,7 +2,7 @@
     "name": "@jynxio/create-app",
     "author": "Jynxio",
     "description": "A CLI tool for creating app templates interactively",
-    "version": "0.10.0",
+    "version": "0.10.1",
     "license": "MIT",
     "type": "module",
     "bin": {
