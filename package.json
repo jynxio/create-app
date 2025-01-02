@@ -42,6 +42,7 @@
         "!template-vanilla/package-lock.json",
         "template-next",
         "template-next/.gitignore",
+        "template-next/next-env.d.ts",
         "!template-next/pnpm-lock.yaml",
         "!template-next/package-lock.json"
     ],
